@@ -1,0 +1,37 @@
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!.gitlab-ci.yml
+!default-plugins/
+!favicons/
+!signatures/
+!wp-content/
+!apple-touch*.png
+!composer.*
+!README.md
+!browserconfig.xml
+!favicon.ico
+!site.webmanifest
+
+# Keep these files out of the repo
+/wp-content/cache/*
+/wp-content/plugins
+/wp-content/themes/*/node_modules
+/wp-content/themes/twenty*
+/wp-content/themes/sage*
+/wp-content/themes/index.php
+/wp-content/upgrade
+/wp-content/uploads
+/wp-content/wp-rocket-config
+/wp-content/advanced-cache.php
+/wp-content/db.php
+/wp-content/index.php
+/wp-content/object-cache.php
+/wp-config.php
+.htaccess
+*.log
+*.sql
+*.DS_Store
+*Thumbs.db
+*~imageoptim*
+auth.json
