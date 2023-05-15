@@ -8,13 +8,13 @@ define( 'SITE_SLUG', 'rx_pharmacy' );
 define( 'REMOTE_URL', 'https://rxpharmacyadev.wpengine.com/' );
 define( 'THEME_VERSION', '4.3' );
 define( 'THEME_ENV', 'dev' );
-define( 'THEME_ASSETS', get_stylesheet_directory_uri() . '/assets/' ); 
-define( 'THEME_INCLUDES', get_stylesheet_directory() . '/includes/' ); 
+define( 'THEME_ASSETS', get_stylesheet_directory_uri() . '/assets/' );
+define( 'THEME_INCLUDES', get_stylesheet_directory() . '/includes/' );
 
-/** 
+/**
  * Init Theme
 */
-function enfold_child_setup() {  
+function enfold_child_setup() {
 	add_theme_support( 'avia_template_builder_custom_post_type_grid' );
 	add_theme_support( 'add_avia_builder_post_type_option' );
 	add_theme_support( 'deactivate_layerslider' );
@@ -22,7 +22,7 @@ function enfold_child_setup() {
 	remove_filter( 'the_title', 'wptexturize' );
 	remove_filter( 'avia_ampersand', 'avia_ampersand' );
 	remove_action( 'init', 'portfolio_register' );
-	 
+
 	add_filter( 'kriesi_backlink', '__return_false' );
 
 	update_option( 'image_default_size', 'full' );
@@ -31,10 +31,10 @@ function enfold_child_setup() {
 
 	/* Gutenberg */
 	add_filter( 'avf_block_editor_theme_support', '__return_false' );
-	add_theme_support( 'align-wide' );  
+	add_theme_support( 'align-wide' );
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'assets/css/style-editor.css' );
-	
+
 	/* Gutenberg Block patterns */
 	remove_theme_support( 'core-block-patterns' );
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
@@ -50,7 +50,7 @@ function enfold_child_setup() {
 				'content'     => "", // https://wpblockz.com/tool/tool-to-generate-code-for-your-wordpress-block-patterns/
 				'categories'  => array( SITE_SLUG ),
 			)
-		);	
+		);
   	}
 }
 add_action( 'after_setup_theme', 'enfold_child_setup', 51 );
@@ -63,15 +63,16 @@ function enfold_child_scripts() {
 	wp_enqueue_script( 'avia-module-main', THEME_ASSETS . 'js/main.js', array(), THEME_VERSION, true );
 	wp_enqueue_style( 'googlefont', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap', array(), THEME_VERSION, 'all' );
 	wp_enqueue_style( 'extrafont', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap', array(), THEME_VERSION, 'all' );
+	wp_enqueue_style('app/gravity-forms', THEME_ASSETS . 'css/gravity-forms.css', [], THEME_VERSION);
 
 	if ( is_single() ) {
 
 		/* Common Single CSS */
-		
+
 		if( is_singular( array( 'post','news-press','resources', 'webinar' ) ) ) {
 			wp_enqueue_style( 'theme-single-common', THEME_ASSETS . 'css/single-common.css', array(), THEME_VERSION, 'all' );
 		}
-		
+
 
 		/* Specific Single CSS */
 		/*
