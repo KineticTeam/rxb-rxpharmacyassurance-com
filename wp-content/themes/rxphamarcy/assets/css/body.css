@@ -423,6 +423,12 @@
   letter-spacing: calc((14px / 1000) * 100);
   transition: box-shadow ease 0.25s;
 }
+
+.avia-button.avia-size-small {
+  padding: 0.5rem 1rem !important;
+  min-width: 0 !important;
+}
+
 #top div .avia-button:hover,
 #top .button:hover,
 .wp-block-button a:hover,
@@ -641,11 +647,7 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 767px) {
-  #top .boxed-item-grid {
-    margin-right: -7.5vw;
-  }
-}
+
 #top .boxed-item-grid .ep-item-grid {
   justify-content: center;
   position: relative;
@@ -796,9 +798,54 @@
     display: none;
   }
 }
+
+#top .boxed-item-grid-inverse {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+#top .boxed-item-grid-inverse .ep-item-grid {
+  --columnGap: 2rem;
+}
+
+#top .boxed-item-grid-inverse .ep-item-grid-item .ep-item-grid-item-inner {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  height: 100%;
+  min-height: 0;
+}
+
+#top .boxed-item-grid-inverse .ep-item-grid-item .ep-item-grid-item-inner .ep-item-grid-item-media {
+  margin-bottom: 0;
+}
+
+#top .boxed-item-grid-inverse .ep-item-grid-item-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: normal;
+  color: #304d7c;
+}
+
+@media only screen and (min-width: 1024px) {
+  #top .boxed-item-grid-inverse .ep-item-grid-item:not(:last-child)::after {
+    content: '\25BA';
+    background: transparent;
+    box-shadow: none;
+    font-size: 1.4em;
+    opacity: 0.4;
+  }
+}
+
 #top .icon-boxed-grid .ep-item-grid-item .ep-item-grid-item-inner {
   display: flex;
 }
+
+#top .boxed-item-grid-inverse .ep-item-grid-item .ep-item-grid-item-inner .ep-item-grid-content-wrapper .ep-item-grid-item-content > *:last-child {
+  margin-bottom: 0;
+}
+
 #top
   .icon-boxed-grid
   .ep-item-grid-item
@@ -2598,8 +2645,19 @@
   .ep-item-grid-item-title {
   flex-grow: 1;
   order: 3;
-  padding: 15px 0px;
 }
+
+#top .ep-item-grid-item-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#top .ep-link-wrapper:hover {
+  color: #db3cfd !important;
+}
+
 #top
   .ep-posts-grid
   .ep-item-grid-item

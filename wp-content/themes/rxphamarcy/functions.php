@@ -33,7 +33,7 @@ function enfold_child_setup() {
 	add_filter( 'avf_block_editor_theme_support', '__return_false' );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'editor-styles' );
-	add_editor_style( 'assets/css/style-editor.css' );
+	add_editor_style( 'assets/css/editor-style.css' );
 
 	/* Gutenberg Block patterns */
 	remove_theme_support( 'core-block-patterns' );
@@ -61,7 +61,7 @@ add_action( 'after_setup_theme', 'enfold_child_setup', 51 );
 function enfold_child_scripts() {
 	wp_enqueue_style( 'avia-module-main', THEME_ASSETS . 'css/main.css', array(), THEME_VERSION, 'all' );
 	wp_enqueue_script( 'avia-module-main', THEME_ASSETS . 'js/main.js', array(), THEME_VERSION, true );
-	wp_enqueue_style( 'googlefont', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap', array(), THEME_VERSION, 'all' );
+	wp_enqueue_style( 'googlefont', 'https://fonts.bunny.net/css?family=lato:300,300i,400,400i,700,700i|poppins:300,300i,400,400i,700,700i', array(), THEME_VERSION, 'all' );
 	wp_enqueue_style( 'extrafont', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap', array(), THEME_VERSION, 'all' );
 	wp_enqueue_style('app/gravity-forms', THEME_ASSETS . 'css/gravity-forms.css', [], THEME_VERSION);
 
@@ -117,3 +117,4 @@ require THEME_INCLUDES . 'theme-functions.php';
 require THEME_INCLUDES . 'theme-shortcodes.php';
 require THEME_INCLUDES . 'theme-hooks.php';
 require THEME_INCLUDES . 'theme-ep-hooks.php';
+require THEME_INCLUDES . 'tiny-mce.php';
