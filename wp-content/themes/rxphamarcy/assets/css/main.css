@@ -1293,7 +1293,7 @@ html.burger-is-active .header .hamburger-content {
 #top .h1,
 .text-4xl {
   font-size: 40px;
-  line-height: 1.625;
+  line-height: 1.18182;
 }
 
 .font-sans {
