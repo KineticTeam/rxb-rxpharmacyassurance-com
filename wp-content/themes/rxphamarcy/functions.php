@@ -5,9 +5,9 @@
  */
 define( 'SITE_NAME', 'RX Pharmacy' );
 define( 'SITE_SLUG', 'rx_pharmacy' );
-define( 'REMOTE_URL', 'https://rxpharmacyadev.wpengine.com/' );
-define( 'THEME_VERSION', '4.3' );
-define( 'THEME_ENV', 'dev' );
+define( 'REMOTE_URL', 'https://rxpharmacyassurance.com/' );
+define( 'THEME_VERSION', '4.3.1' );
+define( 'THEME_ENV', wp_get_environment_type() );
 define( 'THEME_ASSETS', get_stylesheet_directory_uri() . '/assets/' );
 define( 'THEME_INCLUDES', get_stylesheet_directory() . '/includes/' );
 

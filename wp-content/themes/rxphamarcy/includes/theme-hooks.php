@@ -4,7 +4,7 @@
  * Debug mode
  */
 function enfold_child_debug_mode(){
-	return THEME_ENV == "dev" ? "debug" : "";
+	return THEME_ENV === "development" ? "debug" : "";
 }
 add_action( 'avia_builder_mode', 'enfold_child_debug_mode' );
 
@@ -77,7 +77,7 @@ function enfold_child_tab_slider_options( $options ) {
 		"type" 	=> "input"
 	);
 	*/
-	
+
 	return $options;
 }
 add_filter( 'avf_ep_tab_slider_options', 'enfold_child_tab_slider_options' );
@@ -133,7 +133,7 @@ add_filter( 'avf_ep_subheading_default_size', 'enfold_child_subheading_default_s
  */
 function enfold_child_custom_google_fonts( $fonts ){
 	// $fonts["Roboto"] = "Roboto:300,400,700";
-	return $fonts;  
+	return $fonts;
 }
 add_filter( 'avf_google_heading_font', 'enfold_child_custom_google_fonts', 10, 2 );
 add_filter( 'avf_google_content_font', 'enfold_child_custom_google_fonts', 10, 2 );
@@ -175,7 +175,7 @@ function enfold_child_layout_elements( array $elements ) {
 		"type"  => "select",
 		"std"   => "",
 		"class" => "avia-style",
-		"subtype" => array( 
+		"subtype" => array(
 							__("Default",'avia_framework') => '',
 							__('Alternate','avia_framework') => 'is-alternate',
 
@@ -193,7 +193,7 @@ function enfold_child_layout_elements( array $elements ) {
         "subtype" => array(
                             __("Disable",'avia_framework') => '',
                             __('Enable','avia_framework') => 'enabled',
-    
+
                 )
         );
 
@@ -307,7 +307,7 @@ function enfold_child_default_icons( $icons ) {
 }
 add_filter( 'avf_default_icons', 'enfold_child_default_icons', 10, 1 );
 
-/** 
+/**
  * Replaces href value on Menu items linking to # in with javascript:void(0)
  */
 function enfold_child_menu_items_replace_hash($menu_item) {
@@ -362,7 +362,7 @@ function enfold_child_redirect_func() {
 		wp_redirect( home_url() );
 		exit();
 	}
-	
+
 	if( is_singular() ){
 		if( function_exists( 'get_field' ) ) {
 			if( get_field( "custom_link" ) ) {
@@ -449,9 +449,9 @@ add_filter( 'wpseo_json_ld_output', '__return_false' );
 function enfold_child_wp_schema_pro_article( $schema, $data, $post  ) {
 	if( is_singular( 'post' ) ) {
 		$post_id = get_the_ID();
-		if( has_term( "", "post_author", $post_id ) ) { 
+		if( has_term( "", "post_author", $post_id ) ) {
 			$schema['author'] = array();
-			foreach ( get_the_terms( $post_id, "post_author" ) as $author ) { 
+			foreach ( get_the_terms( $post_id, "post_author" ) as $author ) {
 				$author_id = $author->term_id;
 				$schema['author'][] = array(
 					"@type" => "Person",
@@ -470,9 +470,9 @@ add_filter( 'wp_schema_pro_schema_article', 'enfold_child_wp_schema_pro_article'
 function enfold_child_wpseo_enhanced_slack_data( $data, $presentation ) {
 	if( is_singular( 'post' ) ) {
 		$post_id = get_the_ID();
-		if( has_term( "", "post_author", $post_id ) ) { 
+		if( has_term( "", "post_author", $post_id ) ) {
 			$authors = array();
-			foreach ( get_the_terms( $post_id, "post_author" ) as $author ) { 
+			foreach ( get_the_terms( $post_id, "post_author" ) as $author ) {
 				$author_id = $author->term_id;
 				$authors[] = get_term_field( 'name', $author_id );
 			}
