@@ -123,13 +123,6 @@ function enfold_fast_scripts() {
 		wp_deregister_style( 'dashicons' );
 	}
 
-	/** Gutenberg assets, enable if Gutenberg is to be used, place a conditional here */
-	wp_dequeue_style( 'wp-block-library' );
-	wp_dequeue_style( 'wp-block-library-theme' );
-	wp_dequeue_style( 'wc-block-style' );
-	wp_dequeue_style( 'global-styles' );
-	wp_deregister_script( 'avia_blocks_front_script' );
-
 	/** Enfold modules for sticky, mega not used */
 	wp_deregister_script( 'avia-sticky-header' );
 	wp_deregister_script( 'avia-megamenu' );
