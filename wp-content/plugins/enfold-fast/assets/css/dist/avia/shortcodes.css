@@ -1,0 +1,71 @@
+.avia-section-small .content { padding-top: 20px; padding-bottom: 20px;}
+.avia-section-large .content { padding-top: 70px; padding-bottom: 70px;}
+.avia-section-huge .content { padding-top: 130px; padding-bottom: 130px;}
+.avia-section-no-padding .content, .avia-section-custom .content {padding-top:0; padding-bottom:0;}
+
+.avia-full-stretch{ background-size: cover !important; }
+.avia-full-contain{ background-size: contain !important; }
+
+.avia-section {clear: both;width: 100%;float: left;min-height: 100px;position: static}
+
+div .av-section-color-overlay-wrap{position: relative; width:100%; }
+div .av-section-color-overlay{position: absolute; top:0; left: 0; bottom: 0; width:100%; }
+div .av-section-color-overlay{z-index: 1;}
+
+.avia_textblock {
+  clear: both;
+  line-height: inherit
+}
+
+html:not(.avia_mobile) .av-animated-generic,
+html:not(.avia_mobile) .avia_animated_image{opacity: 0}
+
+
+#top .av-section-with-video-bg{border-top:none; position: relative;}
+
+#top .av-section-video-bg{
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom: 0;
+padding: 0;
+margin: 0;
+z-index: 1;
+}
+
+#top .av-section-video-bg .av-click-to-play-overlay{
+	display: none;
+}
+
+
+#top .av-section-video-bg .avia-slideshow-inner{
+height:100% !important;
+}
+
+
+#top .av-section-with-video-bg .av-section-video-bg .av-video-service-vimeo iframe{
+	-webkit-transform: 	scale(1.2);
+	-ms-transform: 		scale(1.2);
+	transform: 			scale(1.2);
+}
+
+#top .av-section-with-video-bg .av-section-video-bg:after, .av-click-overlay{ 
+  content: ".";
+  position: absolute;
+  text-indent: -200px;
+  overflow: hidden;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 11;
+  
+  /*this allows to toggle to work in IE. its a hack since the browser does not accept click events on elements without bg. */
+  filter: alpha(opacity=0); opacity: 0; background: #000;
+  }
+
+
+  .avia_mobile #top .av-section-mobile-video-disabled .av-section-video-bg{display:none;}
+  .avia_desktop #top .av-section-mobile-video-disabled{background-image: none !important;}
+  

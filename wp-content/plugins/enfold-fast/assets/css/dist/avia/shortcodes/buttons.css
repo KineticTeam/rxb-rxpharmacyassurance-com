@@ -1,0 +1,4 @@
+.avia-button-center {display:block; text-align: center; clear:both;}
+.avia-button-right  {display:block; float:right;}
+.avia-button.avia-position-right{float:right; display:block;}
+.avia-button.avia-position-left{float:left; display:block;}

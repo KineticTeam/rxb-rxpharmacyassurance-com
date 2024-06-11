@@ -1,0 +1,1 @@
+#top .ep-item-grid-wrapper.ep-item-grid-paged .ep-item-grid-item{opacity:1;transition:opacity ease 0.2s}#top .ep-item-grid-wrapper.ep-item-grid-paged .ep-item-grid-item:not(.is-shown){position:absolute !important;opacity:0;visibility:hidden}@media only screen and (min-width: 481px){#top .ep-item-grid-wrapper .flickity-viewport[style*='height'] .ep-item-fill{height:100%}}

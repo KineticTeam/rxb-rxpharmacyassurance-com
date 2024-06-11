@@ -1,0 +1,5 @@
+#top .av_font_icon a{color: inherit; display: block;}
+.av_font_icon a:hover, .av_font_icon a:focus {text-decoration: none; }
+.av_font_icon { display:block; text-align: center;}
+.avia-icon-pos-left {float:left; margin-right: 0.5em;}
+.avia-icon-pos-right {float: right; margin-left: 0.5em;}

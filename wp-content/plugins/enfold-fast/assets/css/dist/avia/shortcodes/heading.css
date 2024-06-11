@@ -1,0 +1,13 @@
+.av-special-heading {width: 100%;clear: both;display: block;position: relative;}
+#top #wrap_all .av-inherit-size .av-special-heading-tag{ font-size: 1em; }
+.modern-centered{text-align: center}
+.modern-right{text-align: right}
+
+.av-special-heading .av-special-heading-tag {
+    padding: 0;
+    margin: 0;
+}
+
+#top #wrap_all .custom-color-heading .av-special-heading-tag, #top .custom-color-heading a, #top .custom-color-heading strong, #top .custom-color-heading .special_amp {
+    color: inherit;
+}

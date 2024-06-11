@@ -1,0 +1,7 @@
+.avia-image-container{display:block; position: relative; max-width: 100%;}
+.avia-image-container-inner, .avia_image, .av-image-caption-overlay{display:block; position: relative; max-width: 100%;}
+.avia-image-container.avia-align-center{display:block; margin: 0 auto 10px auto;  text-align: center;  clear: both;}
+.avia-image-container.avia-align-center .avia-image-container-inner{margin:0 auto; display:inline-block; vertical-align:bottom}
+.avia-image-container.avia-align-left{display:block; float:left; margin-right: 15px; margin-top: 5px;}
+.avia-image-container.avia-align-right{display:block; float:right; margin-left: 15px; margin-top: 5px;}
+.avia-image-container.avia-align-center.avia-builder-el-no-sibling{margin-bottom:0; margin-top:0;}

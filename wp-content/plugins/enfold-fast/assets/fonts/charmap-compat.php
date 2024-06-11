@@ -1,0 +1,17 @@
+<?php $chars = array();
+$chars['fa-fontello'][] = 'uf308';
+$chars['fa-fontello'][] = 'uf16d';
+$chars['fa-fontello'][] = 'uf16a';
+$chars['fa-fontello'][] = 'uf30c';
+$chars['fa-fontello'][] = 'uf099';
+$chars['fa-fontello'][] = 'uf0e1';
+$chars['fa-fontello'][] = 'uf09a';
+$chars['fa-fontello'][] = 'ue800';
+$chars['fa-fontello'][] = 'ue801';
+$chars['fa-fontello'][] = 'ue802';
+$chars['fa-fontello'][] = 'uf0e0';
+$chars['fa-fontello'][] = 'ue803';
+$chars['fa-fontello'][] = 'ue804';
+$chars['fa-fontello'][] = 'ue805';
+$chars['fa-fontello'][] = 'ue806';
+$chars['fa-fontello'][] = 'uf1d8';
