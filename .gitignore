@@ -6,6 +6,7 @@
 !favicons/
 !signatures/
 !wp-content/
+!.valetrc
 !apple-touch*.png
 !composer.*
 !README.md
