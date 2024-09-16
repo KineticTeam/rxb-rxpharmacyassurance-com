@@ -1,9 +1,0 @@
-*~
-.DS_Store
-.svn
-.cvs
-.vscode
-*.bak
-*.swp
-node_modules
-Thumbs.db
